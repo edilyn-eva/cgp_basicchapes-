@@ -1,0 +1,25 @@
+import tkinter as tk
+
+# Create the main window
+window = tk.Tk()
+window.title("CGP Assignment - Shapes Drawing")
+window.geometry("500x400")
+
+# Create a canvas
+canvas = tk.Canvas(window, width=500, height=400, bg="white")
+canvas.pack()
+
+# Draw a rectangle
+canvas.create_rectangle(50, 50, 200, 150, fill="blue")
+
+# Draw a circle (oval with equal width & height)
+canvas.create_oval(250, 50, 350, 150, fill="green")
+
+# Draw a line
+canvas.create_line(50, 200, 350, 300, fill="red", width=3)
+
+# Add your name at the bottom
+canvas.create_text(250, 370, text="Edilyn Eva", font=("Arial", 14))
+
+# Run the application
+window.mainloop()
